@@ -9,6 +9,20 @@
   <?php include './views/inc/link.php'?>  
 </head>
 <body class="hold-transition sidebar-mini">
+  <?php
+  $peticionAjax=false;
+  require_once './controllers/viewsController.php';
+  $ins_vista= new viewsController();
+  $vistas= $ins_vista->get_views_controller();
+
+  if($vistas=="login" || $vistas=="404"){
+    require_once   "./views/contents/".$vistas."-view.php";
+  }else{
+    session_start(['name'=>'spm']);
+    
+  }
+  
+  ?>
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
