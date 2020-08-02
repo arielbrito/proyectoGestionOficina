@@ -6,17 +6,17 @@
   <title><?=COMPANY?>  </title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php include './inc/link.php'?>  
+  <?php include './views/inc/link.php'?>  
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Navbar -->
-  <?php include './inc/navbar.php'?> 
+  <?php include './views/inc/navbar.php'?> 
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <?php include './inc/sidebar.php'?>
+  <?php include './views/inc/sidebar.php'?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -66,9 +66,9 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <?php include './inc/footer.php'?>
+  <?php include './views/inc/footer.php'?>
 </div>
 <!-- ./wrapper -->
-<?php include './inc/script.php'?>
+<?php include './views/inc/script.php'?>
 </body>
 </html>
