@@ -81,24 +81,24 @@ MODAL AGREGAR USUARIO
               </button>
             </div>
             <div class="modal-body">
-                <form action="" role="form" method="POST">
+                <form action="" role="form" method="POST" class="FormularioAjax">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fa fa-user"></i></span>
                   </div>
-                  <input type="text" class="form-control" placeholder="ingresar su nombre" name="usuario_nombre_new">
+                  <input type="text" class="form-control" placeholder="ingrese su nombre" name="usuario_nombre_new" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{4,35}" maxlength="20"  required>
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fa fa-key"></i></span>
                   </div>
-                  <input type="text" class="form-control" placeholder="ingresar su usuario" name="usuario_usuario_new>">
+                  <input type="text" class="form-control" placeholder="ingresar su usuario" name="usuario_usuario_new>" pattern="[a-zA-Z0-9]{4,35}" required>
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fa fa-lock"></i></span>
                   </div>
-                  <input type="text" class="form-control" placeholder="ingresar su clave" name="usuario_clave_new>">
+                  <input type="password" class="form-control" placeholder="ingresar su clave" name="usuario_clave_new>" pattern="[a-zA-Z0-9$@.-]{7,100}" maxlength="100" required>
                 </div>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">

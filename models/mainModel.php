@@ -115,6 +115,43 @@ class mainModel{
      }//fin validar fecha
 
 
+     protected static function subir_imagen_modelo($archivo)
+     {
+         list($ancho, $alto)=getimagesize($archivo['usuario_foto_new']['tmp_name']);
+         $nuevoAncho=500;
+         $nuevoAlto=500;
+
+         //crear el directorio del usuario
+         $directorio= URL_BASE."views/assets/img".$_POST['usuario_nombre_new'];
+         mkdir($directorio,0755);
+
+         //Guardar la imagen si es jpeg
+         if($archivo['usuario_foto_new']['type']=="image/jpeg"){
+             $aleatorio=mt_rand(100, 999);
+             $ruta=URL_BASE."views/assets/img".$_POST['usuario_nombre_new']."/".$aleatorio."jpg";
+             $origen=imagecreatefromjpeg($archivo['usuario_foto_new']['tmp_name']);
+             $destino=imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+             imagecopyresized($destino,$origen,0,0,0,0,$nuevoAncho, $nuevoAlto,$ancho, $alto);
+             imagejpeg($destino,$ruta);
+            
+         }
+
+         //guardar la imagen si es png
+         if($archivo['usuario_foto_new']['type']=="image/png"){
+            $aleatorio=mt_rand(100, 999);
+            $ruta=URL_BASE."views/assets/img".$_POST['usuario_nombre_new']."/".$aleatorio."png";
+            $origen=imagecreatefrompng($archivo['usuario_foto_new']['tmp_name']);
+            $destino=imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+            imagecopyresized($destino,$origen,0,0,0,0,$nuevoAncho, $nuevoAlto,$ancho, $alto);
+            imagejpeg($destino,$ruta);
+
+         }
+
+         return $ruta;
+
+     }
+
+
 
 
 
