@@ -17,3 +17,12 @@
 
 <!-- PAGE SCRIPTS -->
 <script src="<?=URL_BASE?>views/js/pages/dashboard2.js"></script>
+
+<!-- DataTables -->
+<script src="<?=URL_BASE?>views/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?=URL_BASE?>views/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?=URL_BASE?>views/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="<?=URL_BASE?>views/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+<!-- CUSTOM SCRIPS -->
+<script src="<?=URL_BASE?>views/js/app.js"></script>

@@ -9,7 +9,7 @@ class viewsModels{
 
     protected static function get_views_model($vista){
         $listaBlanca= [
-            "home"
+            "home", "usuario"
 
         ];
 
